@@ -4,7 +4,7 @@ import type { CartItem } from "@/stores/cartStore";
 export const SHOPIFY_API_VERSION = '2025-07';
 export const SHOPIFY_STORE_PERMANENT_DOMAIN = 'print-and-play-makers-xpi66.myshopify.com';
 export const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
-export const SHOPIFY_STOREFRONT_TOKEN = '6ac22d3e60225a3d2d22a1e74cea87c9';
+export const SHOPIFY_STOREFRONT_TOKEN = '5e65da28d16f29e30791da6c170a0bda';
 
 const CART_CREATE_MUTATION = `
   mutation cartCreate($input: CartInput!) {
