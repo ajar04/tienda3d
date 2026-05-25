@@ -24,6 +24,13 @@ const categories = [
     icon: Car,
     description: "Piezas de repuesto a medida",
     query: "tag:autoparte OR tag:autopartes OR tag:auto"
+  },
+  {
+    id: "repuestos-impresoras",
+    name: "Repuestos 3D",
+    icon: Wrench,
+    description: "Repuestos y accesorios para impresoras 3D",
+    query: "tag:repuesto OR tag:repuestos OR tag:impresora OR tag:printer"
   }
 ];
 
