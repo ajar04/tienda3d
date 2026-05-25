@@ -1,6 +1,6 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { Lamp, Blocks, Car } from "lucide-react";
+import { Lamp, Blocks, Car, Wrench } from "lucide-react";
 import { ProductGrid } from "./ProductGrid";
 
 const categories = [
@@ -24,6 +24,13 @@ const categories = [
     icon: Car,
     description: "Piezas de repuesto a medida",
     query: "tag:autoparte OR tag:autopartes OR tag:auto"
+  },
+  {
+    id: "repuestos-impresoras",
+    name: "Repuestos 3D",
+    icon: Wrench,
+    description: "Repuestos y accesorios para impresoras 3D",
+    query: "tag:repuesto OR tag:repuestos OR tag:impresora OR tag:printer"
   }
 ];
 
@@ -31,7 +38,7 @@ export const CategoryTabs = () => {
   return (
     <div className="w-full">
       <Tabs defaultValue="lamparas" className="w-full">
-        <TabsList className="grid w-full grid-cols-3 mb-8">
+        <TabsList className="grid w-full grid-cols-4 mb-8">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
