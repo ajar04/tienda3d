@@ -1,6 +1,6 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { Lamp, Blocks, Car } from "lucide-react";
+import { Lamp, Blocks, Car, Wrench } from "lucide-react";
 import { ProductGrid } from "./ProductGrid";
 
 const categories = [
