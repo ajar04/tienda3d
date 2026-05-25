@@ -38,7 +38,7 @@ export const CategoryTabs = () => {
   return (
     <div className="w-full">
       <Tabs defaultValue="lamparas" className="w-full">
-        <TabsList className="grid w-full grid-cols-3 mb-8">
+        <TabsList className="grid w-full grid-cols-4 mb-8">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
