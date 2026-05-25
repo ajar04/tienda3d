@@ -1,6 +1,6 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { Lamp, Blocks, Car, Wrench } from "lucide-react";
+import { Lamp, Blocks, Car, Wrench, Package, FlaskConical, Printer } from "lucide-react";
 import { ProductGrid } from "./ProductGrid";
 
 const categories = [
@@ -9,42 +9,69 @@ const categories = [
     name: "Lámparas",
     icon: Lamp,
     description: "Diseños únicos en impresión 3D",
-    query: "tag:lampara OR tag:lamparas OR tag:luz"
+    query: "tag:lampara OR tag:lamparas OR tag:luz",
   },
   {
     id: "jugueteria",
     name: "Juguetería",
     icon: Blocks,
     description: "Juguetes personalizados y creativos",
-    query: "tag:juguete OR tag:juguetes OR tag:toy"
+    query: "tag:juguete OR tag:juguetes OR tag:toy",
   },
   {
     id: "autopartes",
     name: "Autopartes",
     icon: Car,
     description: "Piezas de repuesto a medida",
-    query: "tag:autoparte OR tag:autopartes OR tag:auto"
+    query: "tag:autoparte OR tag:autopartes OR tag:auto",
   },
   {
     id: "repuestos-impresoras",
     name: "Repuestos 3D",
     icon: Wrench,
     description: "Repuestos y accesorios para impresoras 3D",
-    query: "tag:repuesto OR tag:repuestos OR tag:impresora OR tag:printer"
-  }
+    query: "tag:repuesto OR tag:repuestos OR tag:impresora OR tag:printer",
+  },
+  {
+    id: "filamentos",
+    name: "Filamentos",
+    icon: Package,
+    description:
+      "Filamentos PLA, PETG, ABS y TPU de marcas top: Bambu Lab, Polymaker, eSUN, Sunlu, Prusament, Hatchbox y Overture",
+    query:
+      "tag:filamento OR tag:filamentos OR tag:pla OR tag:petg OR tag:abs OR tag:tpu OR tag:bambulab OR tag:polymaker OR tag:esun OR tag:sunlu OR tag:prusament",
+  },
+  {
+    id: "resinas",
+    name: "Resinas UV",
+    icon: FlaskConical,
+    description:
+      "Resinas UV para impresión SLA/DLP de marcas líderes: Anycubic, Elegoo, Siraya Tech, Phrozen, eSUN y Sunlu",
+    query:
+      "tag:resina OR tag:resinas OR tag:uv OR tag:sla OR tag:dlp OR tag:anycubic OR tag:elegoo OR tag:sirayatech OR tag:phrozen",
+  },
+  {
+    id: "impresoras",
+    name: "Impresoras 3D",
+    icon: Printer,
+    description:
+      "Impresoras 3D FDM y resina de marcas top: Bambu Lab, Prusa, Creality, Anycubic, Elegoo, Phrozen y Flashforge",
+    query:
+      "tag:impresora3d OR tag:printer3d OR tag:fdm OR tag:sla OR tag:bambulab OR tag:prusa OR tag:creality OR tag:anycubic OR tag:elegoo OR tag:phrozen OR tag:flashforge",
+  },
 ];
 
 export const CategoryTabs = () => {
   return (
     <div className="w-full">
       <Tabs defaultValue="lamparas" className="w-full">
-        <TabsList className="grid w-full grid-cols-4 mb-8">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 mb-8 h-auto">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
               <HoverCard key={category.id} openDelay={200}>
                 <HoverCardTrigger asChild>
-                  <TabsTrigger 
+                  <TabsTrigger
                     value={category.id}
                     className="flex items-center gap-2"
                   >
